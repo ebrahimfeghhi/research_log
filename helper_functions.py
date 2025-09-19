@@ -4,6 +4,8 @@ import numpy as np
 import pickle
 import pickle
 import pandas as pd
+from scipy.stats import ttest_rel
+
 
 def process_and_display_results(pickle_paths, model_names=None):
     """
@@ -56,3 +58,30 @@ def process_and_display_results(pickle_paths, model_names=None):
     # Create and print the Markdown table
     df = pd.DataFrame(all_data)
     print(df.to_markdown(index=False))
+    
+
+def conduct_paired_ttest(model1_path, model2_path):
+    
+    model1_dict = pd.read_pickle(model1_path)
+    model2_dict = pd.read_pickle(model2_path)
+    
+    model1_name = next(iter(model1_dict))
+    model2_name = next(iter(model2_dict))
+    
+    model1_data = model1_dict[model1_name]
+    model2_data = model2_dict[model2_name]
+    
+    stats_test_results = {}
+    
+    print(f"Stats test between {model1_name} and {model2_name}:\n")
+    
+    for key in model1_data.keys():
+        
+        m1_key_val = model1_data[key]
+        m2_key_val = model2_data[key]
+        
+        r, p = ttest_rel(m1_key_val, m2_key_val)
+        
+        print(f"{key} - t value : {r: 0.4f}, p value: {p: 0.4f}")
+        
+        
