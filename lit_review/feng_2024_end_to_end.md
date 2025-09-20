@@ -1,4 +1,4 @@
-***Towards an End-to-End Framework for Invasive Brain Signal Decoding with Large Language Models (Feng et al., 2024)***
+**Towards an End-to-End Framework for Invasive Brain Signal Decoding with Large Language Models (Feng et al., 2024)**
 
 
 ![](figs/feng_2024/end_to_end_overview.png)

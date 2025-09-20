@@ -1,3 +1,5 @@
 {"rule":"CD_NN","sentence":"^\\QProblem Statement: On the Brain-to-Text '24 Dataset, impressive gains in accuracy were made using the following techniques.\\E$"}
 {"rule":"THE_SUPERLATIVE","sentence":"^\\QObtaining the top 100 beams from each seed and selecting the best beam with OPT 6.7B resulting in a single, best hypothesis for each seed.\\E$"}
 {"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QWhen using byte-pair encoding (BPE) labels for the GRU, performance is very low\\E$"}
+{"rule":"ADVERB_VERB_ADVERB_REPETITION","sentence":"^\\QGenerate speech embeddings with a variety of models: Whisper, Hubert, Wav2Vec\nSpeech embeddings are concatenated every \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q frames to perform \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q times down sampling\nDown sampled speech embeddings\\E$"}
+{"rule":"ADVERB_VERB_ADVERB_REPETITION","sentence":"^\\QGenerate speech embeddings with a variety of models: Whisper, Hubert, Wav2Vec\nSpeech embeddings are concatenated every \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q frames to perform \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q times down sampling\nDown sampled speech embeddings are then\\E$"}

@@ -1,0 +1,1 @@
+**An Embarrassingly Simple Approach for LLM with Strong ASR Capacity**
